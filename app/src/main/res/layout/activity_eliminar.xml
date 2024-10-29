@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:id="@+id/mainEliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ImageView en la parte superior -->
+        <ImageView
+            android:id="@+id/imageViewActivityEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/eliminar"
+            android:contentDescription="@string/image_description" />
+
+        <!-- Título de la Activity -->
+        <TextView
+            android:id="@+id/tvTitleActivityEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_eliminar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Selector de Servicio a Eliminar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seleccione_el_servicio_a_eliminar"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerServicioEliminar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Botón Eliminar -->
+        <Button
+            android:id="@+id/btnEliminarServicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/delete"
+            android:text="@string/eliminar_servicio"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:enabled="false"/>
+
+    </LinearLayout>
+</ScrollView>

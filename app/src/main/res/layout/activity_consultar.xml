@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:id="@+id/mainConsultar"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ImageView en la parte superior -->
+        <ImageView
+            android:id="@+id/imageViewActivityConsultar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/consultar"
+            android:contentDescription="@string/image_description" />
+
+        <!-- Título de la Activity -->
+        <TextView
+            android:id="@+id/tvTitleActivityConsultar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/consultar_servicio"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Selector de Servicio a Consultar -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/servicio_a_consultar"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerServicioConsultar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp" />
+
+        <!-- Detalles del Servicio -->
+        <TextView
+            android:id="@+id/tvDetallesServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detalles_del_servicio"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Campo de Descripción del Servicio -->
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/descripcion"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:layout_marginTop="4dp"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <!-- Campo de Monto del Servicio -->
+        <TextView
+            android:id="@+id/tvMonto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monto_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:hint="@string/monto"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="TouchTargetSizeCheck"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <!-- Campo de Fecha del Servicio -->
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:text="@string/fecha_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:focusable="false"
+            android:hint="@string/fecha"
+            android:inputType="date"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <!-- Campo de Cliente -->
+        <TextView
+            android:id="@+id/tvCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cliente"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/spinnerCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <!-- Campo de Comentarios -->
+        <TextView
+            android:id="@+id/tvComentarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:importantForAutofill="no"
+            android:text="@string/comentarios"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <!-- Estado del Servicio -->
+        <EditText
+            android:id="@+id/etComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:hint="@string/comentarios_adicionales"
+            android:inputType="textMultiLine"
+            android:minLines="5"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/estado_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioPendiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pendiente_de_terminar"
+                android:enabled="false"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/radioTerminado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terminado"
+                android:enabled="false"
+                android:visibility="gone" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBoxPagado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/pagado"
+            android:enabled="false"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

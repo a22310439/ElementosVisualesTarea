@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:id="@+id/mainAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- ImageView en la parte superior -->
+        <ImageView
+            android:id="@+id/imageViewActivityAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/agregar"
+            android:contentDescription="@string/image_description" />
+
+        <!-- Título de la Activity -->
+        <TextView
+            android:id="@+id/tvTitleActivityAgregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/title_agregar"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <!-- Campo de Descripción del Servicio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:hint="@string/descripcion"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:minLines="3"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Campo de Monto del Servicio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monto_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etMonto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:hint="@string/monto"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:minHeight="48dp"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Campo de Fecha del Servicio -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:text="@string/fecha_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:focusable="false"
+            android:hint="@string/fecha"
+            android:inputType="date"
+            android:minHeight="48dp"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <!-- Campo de Cliente -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cliente"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:minHeight="48dp" />
+
+        <!-- Campo de Comentarios -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:importantForAutofill="no"
+            android:text="@string/comentarios"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Estado del Servicio -->
+        <EditText
+            android:id="@+id/etComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:autofillHints=""
+            android:hint="@string/comentarios_adicionales"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionDone"
+            android:minHeight="48dp"
+            android:minLines="5"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/estado_del_servicio"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioPendiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pendiente_de_terminar"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/radioTerminado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terminado"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RadioGroup>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/pagado"
+            tools:ignore="TouchTargetSizeCheck,VisualLintButtonSize" />
+
+        <!-- Botón Guardar -->
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/save"
+            android:text="@string/guardar_servicio"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            tools:ignore="VisualLintBounds" />
+
+
+    </LinearLayout>
+</ScrollView>
